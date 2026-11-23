@@ -3,9 +3,10 @@ extends CharacterBody3D
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
+@onready var head: Node3D = $Head
 var mouse_sensitivity = 0.01
 var head_tilt = deg_to_rad(70)
-@onready var head: Node3D = $Head
+var is_mouse_lock = true
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -33,10 +34,15 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventMouseMotion:
+	if event is InputEventMouseMotion and is_mouse_lock == true:
 		rotation.y -= event.relative.x * mouse_sensitivity
 		head.rotation.x -= event.relative.y * mouse_sensitivity
 		head.rotation.x = clampf(head.rotation.x, -head_tilt, head_tilt)
-		
-		
-		
+	if event.is_action_pressed("ui_cancel"):
+		if !is_mouse_lock:
+			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+			is_mouse_lock = true
+		else:
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+			is_mouse_lock = false
+			
