@@ -6,7 +6,7 @@ extends CanvasLayer
 @onready var texture_rect: TextureRect = $TextureRect
 
 var note = 0
-var tempo = 120
+var tempo = 100
 var can_hit = false
 var finished = false
 var grace_length

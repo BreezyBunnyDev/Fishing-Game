@@ -32,3 +32,12 @@ size = Vector3(32, 1, 26)
 
 [node name="Player" parent="." unique_id=1561935719 instance=ExtResource("1_ebmjs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6309817, 1.3098444, -0.62631404)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1925693307]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=127632650]
+offset_left = 83.0
+offset_top = 536.0
+offset_right = 363.0
+offset_bottom = 650.0
+theme_override_font_sizes/font_size = 32

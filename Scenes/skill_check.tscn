@@ -56,10 +56,11 @@ one_shot = true
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1919203482]
 modulate = Color(0, 0, 0, 1)
-offset_left = 418.0
-offset_top = 585.0
-offset_right = 546.0
-offset_bottom = 713.0
+offset_left = 923.0
+offset_top = 651.0
+offset_right = 1051.0
+offset_bottom = 779.0
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_7hk2e")
 
 [connection signal="timeout" from="QuarterNote" to="." method="_on_timer_timeout"]
