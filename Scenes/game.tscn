@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://qa3f1bcvhocq" path="res://Scenes/player.tscn" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://babn0w5501qxw" path="res://Scripts/game.gd" id="1_wrm1d"]
-[ext_resource type="PackedScene" uid="uid://4rfat8ashi7h" path="res://Scenes/ui.tscn" id="2_qxrlw"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_2poj3"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -33,5 +32,3 @@ size = Vector3(32, 1, 26)
 
 [node name="Player" parent="." unique_id=1561935719 instance=ExtResource("1_ebmjs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6309817, 1.3098444, -0.62631404)
-
-[node name="UI" parent="." unique_id=901203055 instance=ExtResource("2_qxrlw")]

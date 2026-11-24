@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://ctdi3a5pktbwx"]
+
+[ext_resource type="Script" uid="uid://dblxy2mye2rvr" path="res://Scripts/skill_check.gd" id="1_nryen"]
+[ext_resource type="Texture2D" uid="uid://6is3wffdvwbx" path="res://icon.svg" id="2_7hk2e"]
+
+[node name="Skill Check" type="CanvasLayer" unique_id=362715209]
+script = ExtResource("1_nryen")
+
+[node name="Label" type="Label" parent="." unique_id=153392680]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -161.0
+offset_top = 332.0
+offset_right = 161.0
+offset_bottom = 377.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "Click on the last beat"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=837235053]
+offset_left = 775.0
+offset_top = 774.99994
+offset_right = 1317.0
+offset_bottom = 902.99994
+scale = Vector2(0.6741121, 0.64000034)
+theme_override_constants/separation = 10
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer" unique_id=1772748916]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+texture = ExtResource("2_7hk2e")
+
+[node name="TextureRect2" type="TextureRect" parent="HBoxContainer" unique_id=947698058]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+texture = ExtResource("2_7hk2e")
+
+[node name="TextureRect3" type="TextureRect" parent="HBoxContainer" unique_id=2130722054]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+texture = ExtResource("2_7hk2e")
+
+[node name="TextureRect4" type="TextureRect" parent="HBoxContainer" unique_id=585892860]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+texture = ExtResource("2_7hk2e")
+
+[node name="QuarterNote" type="Timer" parent="." unique_id=214339288]
+
+[node name="Grace" type="Timer" parent="." unique_id=1019068666]
+one_shot = true
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1919203482]
+modulate = Color(0, 0, 0, 1)
+offset_left = 418.0
+offset_top = 585.0
+offset_right = 546.0
+offset_bottom = 713.0
+texture = ExtResource("2_7hk2e")
+
+[connection signal="timeout" from="QuarterNote" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Grace" to="." method="_on_grace_timeout"]

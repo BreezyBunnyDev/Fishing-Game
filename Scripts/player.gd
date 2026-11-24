@@ -17,7 +17,7 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 
 	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+	if Input.is_action_just_pressed("Jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
@@ -38,7 +38,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		rotation.y -= event.relative.x * mouse_sensitivity
 		head.rotation.x -= event.relative.y * mouse_sensitivity
 		head.rotation.x = clampf(head.rotation.x, -head_tilt, head_tilt)
-	if event.is_action_pressed("ui_cancel"):
+	if event.is_action_pressed("Menu"):
 		if !is_mouse_lock:
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 			is_mouse_lock = true
