@@ -1,6 +1,9 @@
 extends Node3D
 
-const SKILL_CHECK = preload("uid://ctdi3a5pktbwx")
+const COMMON_MINIGAME = preload("uid://ctdi3a5pktbwx")
+const UNCOMMON_MINIGAME = preload("uid://dhl86q6t6hyl")
+
+
 @onready var label: Label = $CanvasLayer/Label
 
 # Called when the node enters the scene tree for the first time.
@@ -24,5 +27,5 @@ func _input(event: InputEvent) -> void:
 		label.text = str(fish) + " " + str(1-percent)
 		
 		if fish == "Common":
-			var skill_check = SKILL_CHECK.instantiate()
+			var skill_check = COMMON_MINIGAME.instantiate()
 			add_child(skill_check)

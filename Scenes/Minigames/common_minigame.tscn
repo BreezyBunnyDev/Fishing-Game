@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ctdi3a5pktbwx"]
 
-[ext_resource type="Script" uid="uid://dblxy2mye2rvr" path="res://Scripts/skill_check.gd" id="1_nryen"]
+[ext_resource type="Script" uid="uid://dblxy2mye2rvr" path="res://Scripts/Minigames/common.gd" id="1_nryen"]
 [ext_resource type="Texture2D" uid="uid://6is3wffdvwbx" path="res://icon.svg" id="2_7hk2e"]
 
 [node name="Skill Check" type="CanvasLayer" unique_id=362715209]
