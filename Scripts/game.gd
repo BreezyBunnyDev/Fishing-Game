@@ -1,10 +1,9 @@
-extends Node3D
+extends Node2D
 
 const COMMON_MINIGAME = preload("uid://ctdi3a5pktbwx")
 const UNCOMMON_MINIGAME = preload("uid://dhl86q6t6hyl")
 
-
-@onready var label: Label = $CanvasLayer/Label
+@onready var label: Label = $Ui/Label
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

@@ -1,0 +1,293 @@
+[gd_scene format=3 uid="uid://cj3ce7u6epo1y"]
+
+[ext_resource type="Script" uid="uid://cuik2u4n01fq6" path="res://Scripts/piano.gd" id="1_0q7sa"]
+
+[node name="On Screen Piano" type="Control" unique_id=145111939]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_0q7sa")
+
+[node name="C" type="ColorRect" parent="." unique_id=1016614694]
+layout_mode = 0
+offset_left = 469.0
+offset_top = 532.0
+offset_right = 596.0
+offset_bottom = 823.0
+
+[node name="D" type="ColorRect" parent="." unique_id=944328389]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 532.0
+offset_right = 723.0
+offset_bottom = 823.0
+
+[node name="C_" type="ColorRect" parent="." unique_id=1231094936]
+layout_mode = 0
+offset_left = 563.0
+offset_top = 532.0
+offset_right = 628.0
+offset_bottom = 697.0
+color = Color(0, 0, 0, 1)
+
+[node name="E" type="ColorRect" parent="." unique_id=2100191117]
+layout_mode = 0
+offset_left = 723.0
+offset_top = 532.0
+offset_right = 850.0
+offset_bottom = 823.0
+
+[node name="D_" type="ColorRect" parent="." unique_id=1232955015]
+layout_mode = 0
+offset_left = 690.0
+offset_top = 532.0
+offset_right = 755.0
+offset_bottom = 697.0
+color = Color(0, 0, 0, 1)
+
+[node name="F" type="ColorRect" parent="." unique_id=329233288]
+layout_mode = 0
+offset_left = 850.0
+offset_top = 532.0
+offset_right = 977.0
+offset_bottom = 823.0
+
+[node name="G" type="ColorRect" parent="." unique_id=1461472027]
+layout_mode = 0
+offset_left = 1103.0
+offset_top = 532.0
+offset_right = 1230.0
+offset_bottom = 823.0
+
+[node name="A" type="ColorRect" parent="." unique_id=1289709139]
+layout_mode = 0
+offset_left = 1230.0
+offset_top = 532.0
+offset_right = 1357.0
+offset_bottom = 823.0
+
+[node name="G_" type="ColorRect" parent="." unique_id=2023180126]
+layout_mode = 0
+offset_left = 1197.0
+offset_top = 532.0
+offset_right = 1262.0
+offset_bottom = 697.0
+color = Color(0, 0, 0, 1)
+
+[node name="B" type="ColorRect" parent="." unique_id=2139148084]
+layout_mode = 0
+offset_left = 1357.0
+offset_top = 532.0
+offset_right = 1484.0
+offset_bottom = 823.0
+
+[node name="A_" type="ColorRect" parent="." unique_id=814578548]
+layout_mode = 0
+offset_left = 1324.0
+offset_top = 532.0
+offset_right = 1389.0
+offset_bottom = 697.0
+color = Color(0, 0, 0, 1)
+
+[node name="F_" type="ColorRect" parent="." unique_id=1825921743]
+layout_mode = 0
+offset_left = 1071.0
+offset_top = 532.0
+offset_right = 1136.0
+offset_bottom = 697.0
+color = Color(0, 0, 0, 1)
+
+[node name="Text" type="Control" parent="." unique_id=188376230]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Text" unique_id=725535037]
+layout_mode = 0
+offset_left = 506.0
+offset_top = 714.0
+offset_right = 548.0
+offset_bottom = 802.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "A"
+
+[node name="Label2" type="Label" parent="Text" unique_id=91864708]
+layout_mode = 0
+offset_left = 636.0
+offset_top = 714.0
+offset_right = 678.0
+offset_bottom = 802.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "S"
+
+[node name="Label3" type="Label" parent="Text" unique_id=811314700]
+layout_mode = 0
+offset_left = 768.0
+offset_top = 713.0
+offset_right = 815.0
+offset_bottom = 801.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "D"
+
+[node name="Label4" type="Label" parent="Text" unique_id=1007395459]
+layout_mode = 0
+offset_left = 894.0
+offset_top = 713.0
+offset_right = 936.0
+offset_bottom = 801.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "F"
+
+[node name="Label5" type="Label" parent="Text" unique_id=269816932]
+layout_mode = 0
+offset_left = 1146.0
+offset_top = 707.0
+offset_right = 1188.0
+offset_bottom = 795.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "J"
+
+[node name="Label6" type="Label" parent="Text" unique_id=952693164]
+layout_mode = 0
+offset_left = 1275.0
+offset_top = 712.0
+offset_right = 1317.0
+offset_bottom = 800.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "K"
+
+[node name="Label7" type="Label" parent="Text" unique_id=1172783401]
+layout_mode = 0
+offset_left = 1407.0
+offset_top = 713.0
+offset_right = 1449.0
+offset_bottom = 801.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "L"
+
+[node name="Label8" type="Label" parent="Text" unique_id=2050950193]
+layout_mode = 0
+offset_left = 565.0
+offset_top = 609.0
+offset_right = 626.0
+offset_bottom = 697.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 64
+text = "W"
+
+[node name="Label9" type="Label" parent="Text" unique_id=1044534803]
+layout_mode = 0
+offset_left = 702.0
+offset_top = 606.0
+offset_right = 744.0
+offset_bottom = 694.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 64
+text = "E"
+
+[node name="Label10" type="Label" parent="Text" unique_id=721324716]
+layout_mode = 0
+offset_left = 1082.0
+offset_top = 606.0
+offset_right = 1130.0
+offset_bottom = 694.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 64
+text = "U"
+
+[node name="Label11" type="Label" parent="Text" unique_id=1938381625]
+layout_mode = 0
+offset_left = 1220.0
+offset_top = 607.0
+offset_right = 1240.0
+offset_bottom = 695.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 64
+text = "I"
+
+[node name="Label12" type="Label" parent="Text" unique_id=283792887]
+layout_mode = 0
+offset_left = 1332.0
+offset_top = 608.0
+offset_right = 1382.0
+offset_bottom = 696.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 64
+text = "O"
+
+[node name="Label13" type="Label" parent="Text" unique_id=1749711524]
+layout_mode = 0
+offset_left = 570.0
+offset_top = 426.0
+offset_right = 872.0
+offset_bottom = 514.0
+theme_override_font_sizes/font_size = 64
+text = "Left Hand"
+
+[node name="Label14" type="Label" parent="Text" unique_id=840044769]
+layout_mode = 0
+offset_left = 1109.0
+offset_top = 414.0
+offset_right = 1451.0
+offset_bottom = 502.0
+theme_override_font_sizes/font_size = 64
+text = "Right Hand"
+
+[node name="Extra" type="Control" parent="." unique_id=1358995435]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect10" type="ColorRect" parent="Extra" unique_id=1752989784]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 697.0
+offset_right = 597.0
+offset_bottom = 823.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect11" type="ColorRect" parent="Extra" unique_id=1808961087]
+layout_mode = 0
+offset_left = 721.0
+offset_top = 697.0
+offset_right = 724.0
+offset_bottom = 823.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect14" type="ColorRect" parent="Extra" unique_id=858553565]
+layout_mode = 0
+offset_left = 1228.0
+offset_top = 697.0
+offset_right = 1231.0
+offset_bottom = 823.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect15" type="ColorRect" parent="Extra" unique_id=1137740921]
+layout_mode = 0
+offset_left = 1355.0
+offset_top = 697.0
+offset_right = 1358.0
+offset_bottom = 823.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect17" type="ColorRect" parent="Extra" unique_id=451138957]
+layout_mode = 0
+offset_left = 848.0
+offset_top = 532.0
+offset_right = 851.0
+offset_bottom = 823.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect18" type="ColorRect" parent="Extra" unique_id=59404069]
+layout_mode = 0
+offset_left = 1101.0
+offset_top = 697.0
+offset_right = 1104.0
+offset_bottom = 823.0
+color = Color(0, 0, 0, 1)

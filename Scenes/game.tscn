@@ -1,43 +1,28 @@
-[gd_scene format=3 uid="uid://druhwvahgs4ee"]
+[gd_scene format=3 uid="uid://bhp8e2rcd3566"]
 
-[ext_resource type="PackedScene" uid="uid://qa3f1bcvhocq" path="res://Scenes/player.tscn" id="1_ebmjs"]
+[ext_resource type="PackedScene" uid="uid://drhmheftuuobq" path="res://Scenes/player.tscn" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://babn0w5501qxw" path="res://Scripts/game.gd" id="1_wrm1d"]
+[ext_resource type="PackedScene" uid="uid://bqddhpq4hicu4" path="res://Scenes/notes.tscn" id="3_3dryh"]
+[ext_resource type="PackedScene" uid="uid://cj3ce7u6epo1y" path="res://Scenes/on_screen_piano.tscn" id="4_3dryh"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_2poj3"]
-sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-
-[sub_resource type="Sky" id="Sky_ebmjs"]
-sky_material = SubResource("ProceduralSkyMaterial_2poj3")
-
-[sub_resource type="Environment" id="Environment_qxrlw"]
-background_mode = 2
-sky = SubResource("Sky_ebmjs")
-glow_enabled = true
-
-[node name="Game" type="Node3D" unique_id=469419756]
+[node name="Game" type="Node2D" unique_id=1110080248]
 script = ExtResource("1_wrm1d")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=891730403]
-environment = SubResource("Environment_qxrlw")
+[node name="Ui" type="CanvasLayer" parent="." unique_id=235801286]
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=224586516]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
-shadow_enabled = true
+[node name="Label" type="Label" parent="Ui" unique_id=589849867]
+offset_left = 23.0
+offset_top = 407.0
+offset_right = 343.0
+offset_bottom = 586.0
 
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=670634055]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0.5)
-use_collision = true
-size = Vector3(32, 1, 26)
+[node name="Player2D" parent="." unique_id=1862226987 instance=ExtResource("1_ebmjs")]
+position = Vector2(1027, 661)
 
-[node name="Player" parent="." unique_id=1561935719 instance=ExtResource("1_ebmjs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6309817, 1.3098444, -0.62631404)
+[node name="Notes" parent="." unique_id=327349542 instance=ExtResource("3_3dryh")]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1925693307]
-
-[node name="Label" type="Label" parent="CanvasLayer" unique_id=127632650]
-offset_left = 83.0
-offset_top = 536.0
-offset_right = 363.0
-offset_bottom = 650.0
-theme_override_font_sizes/font_size = 32
+[node name="On Screen Piano" parent="." unique_id=145111939 instance=ExtResource("4_3dryh")]
+offset_left = -14.0
+offset_top = 135.0
+offset_right = -14.0
+offset_bottom = 135.0
