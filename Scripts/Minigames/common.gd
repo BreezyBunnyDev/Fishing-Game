@@ -1,4 +1,4 @@
-extends CanvasLayer
+extends Control
 
 @onready var container: HBoxContainer = $HBoxContainer
 @onready var quarter_note: Timer = $QuarterNote

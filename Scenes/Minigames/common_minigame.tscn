@@ -2,26 +2,32 @@
 
 [ext_resource type="Script" uid="uid://dblxy2mye2rvr" path="res://Scripts/Minigames/common.gd" id="1_nryen"]
 [ext_resource type="Texture2D" uid="uid://6is3wffdvwbx" path="res://icon.svg" id="2_7hk2e"]
+[ext_resource type="FontFile" uid="uid://bet0lw7k70ab5" path="res://Assets/MyHandwriting-Regular.ttf" id="2_j51ac"]
 
-[node name="Skill Check" type="CanvasLayer" unique_id=362715209]
+[node name="Skill Check" type="Control" unique_id=2045761617]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_nryen")
 
 [node name="Label" type="Label" parent="." unique_id=153392680]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -150.0
-offset_top = -173.0
-offset_right = 172.0
-offset_bottom = -128.0
+offset_left = -193.0
+offset_top = -153.0
+offset_right = 216.0
+offset_bottom = -104.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 32
+theme_override_fonts/font = ExtResource("2_j51ac")
+theme_override_font_sizes/font_size = 48
 text = "Click on the last beat"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=837235053]
+layout_mode = 0
 offset_left = 793.0
 offset_top = 599.99994
 offset_right = 1335.0
@@ -56,6 +62,7 @@ one_shot = true
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1919203482]
 modulate = Color(0, 0, 0, 1)
+layout_mode = 0
 offset_left = 941.0
 offset_top = 476.0
 offset_right = 1069.0

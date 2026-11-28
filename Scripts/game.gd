@@ -1,13 +1,15 @@
-extends Node2D
+extends Node3D
 
 const COMMON_MINIGAME = preload("uid://ctdi3a5pktbwx")
 const UNCOMMON_MINIGAME = preload("uid://dhl86q6t6hyl")
 
+@onready var ui: CanvasLayer = $Ui
 @onready var label: Label = $Ui/Label
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	randomize()
+
 		
 var fish_type = {"Common":.54,"Uncommon":.25,"Rare":.15,"Epic":.05,"Legendary":.01}
 
@@ -27,4 +29,4 @@ func _input(event: InputEvent) -> void:
 		
 		if fish == "Common":
 			var skill_check = COMMON_MINIGAME.instantiate()
-			add_child(skill_check)
+			ui.add_child(skill_check)

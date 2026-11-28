@@ -14,7 +14,7 @@
 [ext_resource type="AudioStream" uid="uid://0rgfp6ss6jr2" path="res://Assets/Notes/A#.wav" id="12_gpbyk"]
 [ext_resource type="AudioStream" uid="uid://mb6788jwk4rf" path="res://Assets/Notes/B.wav" id="13_s8xln"]
 
-[node name="Notes" type="Node2D" unique_id=327349542]
+[node name="Notes" type="Node3D" unique_id=1520404459]
 script = ExtResource("1_01jgs")
 
 [node name="C" type="AudioStreamPlayer" parent="." unique_id=818100394]

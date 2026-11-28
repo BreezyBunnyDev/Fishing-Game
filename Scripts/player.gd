@@ -1,20 +1,38 @@
-extends CharacterBody2D
+extends CharacterBody3D
 
+@onready var animation_player: AnimationPlayer = $Cat/AnimationPlayer
+@onready var cat: Node3D = $Cat
+const SPEED = 5.0
+const JUMP_VELOCITY = 4.5
+var rotation_speed = 5.0
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
-var freeze:bool
 
 func _physics_process(delta: float) -> void:
-	if Input.is_action_just_pressed("ui_cancel"):
-		freeze = true
-		
+	# Add the gravity.
+	if not is_on_floor():
+		velocity += get_gravity() * delta
+
+	# Handle jump.
+	"""
+	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
+	"""
+	
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Vector2(Input.get_axis("Left", "Right"),Input.get_axis("Up", "Down")).normalized()
-	if direction and !freeze:
-		velocity = direction * SPEED
+	var input_dir := Input.get_vector("Left", "Right", "Forward", "Backward")
+	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	
+	if direction:
+		animation_player.play("Animation/Walk",.5)
+		velocity.x = direction.x * SPEED
+		velocity.z = direction.z * SPEED
+		var target_rotation = atan2(direction.x,direction.z) + PI
+		
+		cat.rotation.y = lerp_angle(cat.rotation.y,target_rotation, rotation_speed*delta)
 	else:
-		velocity = Vector2.ZERO
+		animation_player.play("Animation/Idle",.5)
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()

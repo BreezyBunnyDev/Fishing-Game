@@ -1,28 +1,48 @@
-[gd_scene format=3 uid="uid://bhp8e2rcd3566"]
+[gd_scene format=3 uid="uid://druhwvahgs4ee"]
 
-[ext_resource type="PackedScene" uid="uid://drhmheftuuobq" path="res://Scenes/player.tscn" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://babn0w5501qxw" path="res://Scripts/game.gd" id="1_wrm1d"]
-[ext_resource type="PackedScene" uid="uid://bqddhpq4hicu4" path="res://Scenes/notes.tscn" id="3_3dryh"]
 [ext_resource type="PackedScene" uid="uid://cj3ce7u6epo1y" path="res://Scenes/on_screen_piano.tscn" id="4_3dryh"]
+[ext_resource type="PackedScene" uid="uid://drhmheftuuobq" path="res://Scenes/player.tscn" id="5_i6g32"]
+[ext_resource type="FontFile" uid="uid://bet0lw7k70ab5" path="res://Assets/MyHandwriting-Regular.ttf" id="5_wowpa"]
 
-[node name="Game" type="Node2D" unique_id=1110080248]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3dryh"]
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_wowpa"]
+sky_material = SubResource("ProceduralSkyMaterial_3dryh")
+
+[sub_resource type="Environment" id="Environment_i6g32"]
+background_mode = 2
+sky = SubResource("Sky_wowpa")
+
+[node name="Game" type="Node3D" unique_id=2040327849]
 script = ExtResource("1_wrm1d")
 
-[node name="Ui" type="CanvasLayer" parent="." unique_id=235801286]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1090614904]
+environment = SubResource("Environment_i6g32")
 
-[node name="Label" type="Label" parent="Ui" unique_id=589849867]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=638161097]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Ui" type="CanvasLayer" parent="." unique_id=1984165730]
+
+[node name="Label" type="Label" parent="Ui" unique_id=1488907362]
 offset_left = 23.0
 offset_top = 407.0
 offset_right = 343.0
 offset_bottom = 586.0
+theme_override_fonts/font = ExtResource("5_wowpa")
+theme_override_font_sizes/font_size = 64
+metadata/_edit_use_anchors_ = true
 
-[node name="Player2D" parent="." unique_id=1862226987 instance=ExtResource("1_ebmjs")]
-position = Vector2(1027, 661)
+[node name="On Screen Piano" parent="Ui" unique_id=145111939 instance=ExtResource("4_3dryh")]
+metadata/_edit_use_anchors_ = true
 
-[node name="Notes" parent="." unique_id=327349542 instance=ExtResource("3_3dryh")]
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=816068561]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.86691284, 0, -6.5910645)
+use_collision = true
+size = Vector3(23.193542, 1, 22.182129)
 
-[node name="On Screen Piano" parent="." unique_id=145111939 instance=ExtResource("4_3dryh")]
-offset_left = -14.0
-offset_top = 135.0
-offset_right = -14.0
-offset_bottom = 135.0
+[node name="Player" parent="." unique_id=1460219665 instance=ExtResource("5_i6g32")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6392336, 1.5000005, -0.3603887)
